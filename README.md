@@ -75,58 +75,8 @@ default: System.out.print("Invalid");
 }
 }
 }
-More
 
 
 
-package varanum;package varanum;
 
 
-public class Varanum {
-import java.util.Scanner;
-   
-    public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
-       
-       String days[]={"Monday","Monday","Monday","Monday","Monday","Tuesday","Tuesday","Tuesday","Tuesday","Tuesday","Wednesday","Wednesday","Wednesday","Wednesday","Wednesday"};
-       double times[]={06.04,09.04,12.04,15.04,19.04,06.04,09.04,12.04,15.04,19.04,06.04,09.04,12.04,15.04,19.04};
-       int passenger[]={22,119,64,177,21,22,111,87,193,22,11,107,93,162,42};
-       
-       /*displayiing the data*/
-       System.out.println("Days\t\tDeparture times\t\tNumber of passenger");
-       for(int i=0;i<5;i++)
-       System.out.println(days[i]+"\t\t"+times[i]+"\t\t\t"+passenger[i]);
-       
-       System.out.println("\nDays\t\tDeparture times\t\tNumber of passenger");
-       for(int i=5;i<10;i++)
-       System.out.println(days[i]+"\t\t"+times[i]+"\t\t\t"+passenger[i]);
-       
-       System.out.println("\nDays\t\tDeparture times\t\tNumber of passenger");
-       for(int i=10;i<15;i++)
-       System.out.println(days[i]+"\t\t"+times[i]+"\t\t\t"+passenger[i]);
-       
-       /*finding the most popular train*/
-       int max = passenger[0];
-       int in = 0;
-       for(int i=0;i<15;i++){
-        if(passenger[i]>max){
-            max=passenger[i];
-            in=i;
-            }
-       }
-       System.out.println("\nThe day and time of most popular train: "+days[in]+"\t\t"+times[in]);
-       
-       /*finding the least popular train*/
-       int min = passenger[0];
-       int inp = 0;
-       for(int i=0;i<15;i++){
-        if(passenger[i]<min){
-            min=passenger[i];
-            inp=i;
-            }
-       }
-       System.out.println("\nThe day and time of least popular train: "+days[inp]+"\t"+times[inp]);
-       
-       /*finding whether the 6.04 train is more popular than 9.04 train*/
-       int avgtr1=(passenger[0]+passenger[5]+passenger[10])/3;
-       int avgtr2=(passenger[1]+p
